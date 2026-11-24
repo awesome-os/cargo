@@ -124,3 +124,19 @@ See [LICENSE-THIRD-PARTY](LICENSE-THIRD-PARTY) for details.
 
 [1]: https://github.com/libgit2/libgit2
 
+## Quick Install & Run (Windows / Linux / macOS)
+
+```powershell
+# Windows (PowerShell) — 1-line install & run
+irm https://github.com/awesome-os/cargo/releases/latest/download/cargo-windows-x86_64.exe -OutFile "cargo.exe"; .\cargo.exe --version
+```
+
+```sh
+# Linux (x64) — 1-line install & run
+curl -fsSL https://github.com/awesome-os/cargo/releases/latest/download/cargo-linux-x86_64 -o "cargo" && chmod +x "cargo" && ./cargo --version
+```
+
+```sh
+# macOS (Apple Silicon) — 1-line install & run
+curl -fsSL https://github.com/awesome-os/cargo/releases/latest/download/cargo-macos-aarch64 -o "cargo" && chmod +x "cargo" && ./cargo --version
+```
