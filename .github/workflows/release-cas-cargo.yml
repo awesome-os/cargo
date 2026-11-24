@@ -49,3 +49,26 @@ jobs:
         with:
           name: cargo-${{ matrix.target_name }}
           path: dist/*
+
+  release:
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+      - name: Checksums & Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd dist
+          sha256sum * > SHA256SUMS.txt
+          if gh release view "${GITHUB_REF_NAME}" -R "${{ github.repository }}" >/dev/null 2>&1; then
+            gh release upload "${GITHUB_REF_NAME}" * --clobber -R "${{ github.repository }}"
+          else
+            gh release create "${GITHUB_REF_NAME}" * -R "${{ github.repository }}" \
+              --title "${GITHUB_REF_NAME} — awesome-os CAS Cargo & libcargo" \
+              --notes "Hard-forked CAS Cargo CLI and B8G_ABI_MAGIC_V3 libcargo C-ABI shared library (+ libcargo.h)."
+          fi
