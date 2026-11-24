@@ -1,0 +1,51 @@
+name: Release CAS Cargo & libcargo
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            target_name: windows-x86_64
+            bin_ext: .exe
+            lib_src: target/release/libcargo_ffi.dll
+            lib_dst: libcargo-windows-x86_64.dll
+          - os: ubuntu-latest
+            target_name: linux-x86_64
+            bin_ext: ""
+            lib_src: target/release/liblibcargo_ffi.so
+            lib_dst: libcargo-linux-x86_64.so
+          - os: macos-latest
+            target_name: macos-aarch64
+            bin_ext: ""
+            lib_src: target/release/liblibcargo_ffi.dylib
+            lib_dst: libcargo-macos-aarch64.dylib
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Build cargo CLI and libcargo-ffi
+        run: |
+          cargo build --release --bin cargo
+          cargo build --release -p libcargo-ffi
+      - name: Stage release artifacts
+        shell: bash
+        run: |
+          mkdir -p dist
+          cp "target/release/cargo${{ matrix.bin_ext }}" "dist/cargo-${{ matrix.target_name }}${{ matrix.bin_ext }}"
+          cp "${{ matrix.lib_src }}" "dist/${{ matrix.lib_dst }}"
+          cp include/libcargo.h dist/libcargo.h
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cargo-${{ matrix.target_name }}
+          path: dist/*

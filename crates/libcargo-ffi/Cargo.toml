@@ -1,0 +1,16 @@
+[package]
+name = "libcargo-ffi"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "C11 ABI (B8G_ABI_MAGIC_V3) in-process FFI library for Awesome-OS Cargo"
+
+[lib]
+name = "libcargo_ffi"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+cargo.workspace = true
+home.workspace = true
+serde_json.workspace = true
