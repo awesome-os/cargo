@@ -1,0 +1,109 @@
+{
+  "schema": "holo-compiler-lockfile-v1",
+  "abiMagic": "0x33564742",
+  "casLayout": "v11",
+  "repo": "awesome-os/cargo",
+  "targets": [
+    "linux-x64",
+    "macos-arm64"
+  ],
+  "generatedAt": "2026-11-24T23:53:02.473Z",
+  "dependencies": [
+    {
+      "id": "awesome-os/cargo/cargo-linux-x86_64",
+      "kind": "bin",
+      "version": "v0.1.0",
+      "target": "linux-x64",
+      "sha512": "520b88ce4f1cc81ed62b46af41416a1b2d0732bf6fb3a8cf874681b8cd90897abe9ca861150a773df41fc2fff02aa75b2db982f1d949cece8ac70fb32b230230",
+      "size": 42178760,
+      "executable": true,
+      "blob": "v11/files/52/520b88ce4f1cc81ed62b46af41416a1b2d0732bf6fb3a8cf874681b8cd90897abe9ca861150a773df41fc2fff02aa75b2db982f1d949cece8ac70fb32b230230-exec",
+      "url": "https://github.com/awesome-os/cargo/releases/download/v0.1.0/cargo-linux-x86_64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/cargo/cargo-macos-aarch64",
+      "kind": "bin",
+      "version": "v0.1.0",
+      "target": "macos-arm64",
+      "sha512": "d8f3df0a7f3463fc2139bd5ca22cc8016f08c54040eb994b8780f2e6f575e86c2bf685b0ce47336429597a1848907105d6fff9cd9010ecafaa10bd982c1bf115",
+      "size": 34326512,
+      "executable": true,
+      "blob": "v11/files/d8/d8f3df0a7f3463fc2139bd5ca22cc8016f08c54040eb994b8780f2e6f575e86c2bf685b0ce47336429597a1848907105d6fff9cd9010ecafaa10bd982c1bf115-exec",
+      "url": "https://github.com/awesome-os/cargo/releases/download/v0.1.0/cargo-macos-aarch64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/cargo/cargo-windows-x86_64.exe",
+      "kind": "bin",
+      "version": "v0.1.0",
+      "target": "linux-x64",
+      "sha512": "4f4b4fa02201554a001ba6c70aab12d2137228735612bd6337091be2adbc3fe6f328c1e10be59dcd9c7025444ae567615c59ab51365c7d30e5099b4d160f0a8f",
+      "size": 33363456,
+      "executable": true,
+      "blob": "v11/files/4f/4f4b4fa02201554a001ba6c70aab12d2137228735612bd6337091be2adbc3fe6f328c1e10be59dcd9c7025444ae567615c59ab51365c7d30e5099b4d160f0a8f-exec",
+      "url": "https://github.com/awesome-os/cargo/releases/download/v0.1.0/cargo-windows-x86_64.exe",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/cargo/libcargo-linux-x86_64.so",
+      "kind": "lib",
+      "version": "v0.1.0",
+      "target": "linux-x64",
+      "sha512": "7d061189cd70060ac4f28864840d8e75ddacdb63dc12b97a8f732109d292cefddbb3432a637169bd1f4600179206329029048d2f2a65cec2807a7ccae12de3cc",
+      "size": 28371600,
+      "executable": false,
+      "blob": "v11/files/7d/7d061189cd70060ac4f28864840d8e75ddacdb63dc12b97a8f732109d292cefddbb3432a637169bd1f4600179206329029048d2f2a65cec2807a7ccae12de3cc",
+      "url": "https://github.com/awesome-os/cargo/releases/download/v0.1.0/libcargo-linux-x86_64.so",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/cargo/libcargo-macos-aarch64.dylib",
+      "kind": "lib",
+      "version": "v0.1.0",
+      "target": "macos-arm64",
+      "sha512": "c4d328d7e45a4dd236b0b09a0f1a970fa8095ecdb6833cfbc3ac6de7cbb207b84d248622246465016e320cf01c48df31068490c15120fb28407e4a44c5837b63",
+      "size": 21842960,
+      "executable": false,
+      "blob": "v11/files/c4/c4d328d7e45a4dd236b0b09a0f1a970fa8095ecdb6833cfbc3ac6de7cbb207b84d248622246465016e320cf01c48df31068490c15120fb28407e4a44c5837b63",
+      "url": "https://github.com/awesome-os/cargo/releases/download/v0.1.0/libcargo-macos-aarch64.dylib",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/cargo/libcargo-windows-x86_64.dll",
+      "kind": "lib",
+      "version": "v0.1.0",
+      "target": "linux-x64",
+      "sha512": "3c7809d3ab827e627810fa793755b45e748485c59a2cc2cfd89d2252bf48537c5faaf10ee387c47f156602ab8d5080d374d75a1fe4e645e8b7b5f40d5e24d791",
+      "size": 21376512,
+      "executable": false,
+      "blob": "v11/files/3c/3c7809d3ab827e627810fa793755b45e748485c59a2cc2cfd89d2252bf48537c5faaf10ee387c47f156602ab8d5080d374d75a1fe4e645e8b7b5f40d5e24d791",
+      "url": "https://github.com/awesome-os/cargo/releases/download/v0.1.0/libcargo-windows-x86_64.dll",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/cargo/libcargo.h",
+      "kind": "object",
+      "version": "v0.1.0",
+      "target": "any",
+      "sha512": "b94b07ef6f958408e07a541032625f78613497ed8564b5fa40d6dcbef61bc45dd9634269ff87966af971fdaa72a92a56ee7c3922b3ab5a4f3ce6f2dff76e3ed4",
+      "size": 2097,
+      "executable": false,
+      "blob": "v11/files/b9/b94b07ef6f958408e07a541032625f78613497ed8564b5fa40d6dcbef61bc45dd9634269ff87966af971fdaa72a92a56ee7c3922b3ab5a4f3ce6f2dff76e3ed4",
+      "url": "https://github.com/awesome-os/cargo/releases/download/v0.1.0/libcargo.h",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/cargo/SHA256SUMS.txt",
+      "kind": "object",
+      "version": "v0.1.0",
+      "target": "any",
+      "sha512": "93ffdca3e4d3d4892bf5f4919a67729faae72042614961d115af8dee215f5dee03f37af982bf92674135df6bc6be9f9e485dc2b4a9417a3c510724cd595f92d5",
+      "size": 626,
+      "executable": false,
+      "blob": "v11/files/93/93ffdca3e4d3d4892bf5f4919a67729faae72042614961d115af8dee215f5dee03f37af982bf92674135df6bc6be9f9e485dc2b4a9417a3c510724cd595f92d5",
+      "url": "https://github.com/awesome-os/cargo/releases/download/v0.1.0/SHA256SUMS.txt",
+      "dependencies": []
+    }
+  ]
+}
