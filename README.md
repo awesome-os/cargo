@@ -126,17 +126,10 @@ See [LICENSE-THIRD-PARTY](LICENSE-THIRD-PARTY) for details.
 
 ## Quick Install & Run (Windows / Linux / macOS)
 
-```powershell
-# Windows (PowerShell) — 1-line install & run
-irm https://github.com/awesome-os/cargo/releases/latest/download/cargo-windows-x86_64.exe -OutFile "cargo.exe"; .\cargo.exe --version
-```
-
 ```sh
-# Linux (x64) — 1-line install & run
-curl -fsSL https://github.com/awesome-os/cargo/releases/latest/download/cargo-linux-x86_64 -o "cargo" && chmod +x "cargo" && ./cargo --version
-```
+# Install / hydrate from v11 CAS via holo-pm
+holo-pm install repository://github.com/awesome-os/cargo@main
 
-```sh
-# macOS (Apple Silicon) — 1-line install & run
-curl -fsSL https://github.com/awesome-os/cargo/releases/latest/download/cargo-macos-aarch64 -o "cargo" && chmod +x "cargo" && ./cargo --version
+# Or project & run directly via holo-project (0-byte hardlink)
+holo-project "project://rust/cargo?from=repository://github.com/awesome-os/cargo@main"
 ```
